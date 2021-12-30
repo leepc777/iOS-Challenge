@@ -184,6 +184,8 @@ extension MasterTableViewController : UISearchBarDelegate {
                 }
             }
             movies = matchMovies
+            let max = movies.count > 5 ? 5 : movies.count
+            self.topFivePopularMovies = Array(movies[0..<max])
             tableView.reloadData()
         }
         
